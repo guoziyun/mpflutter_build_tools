@@ -567,7 +567,7 @@ ${maybeWeChatPkgs.map((key, value) => MapEntry(key, 'new Promise((resolve) => {w
 
   // https://github.com/mpflutter/mpflutter/issues/552
   void _fixCanvasReuseContextIssue() {
-    final mainDartJSFile = File(join(wechatTmpDir.path, 'pages', 'index', 'main.dart.js'));
+    final mainDartJSFile = File(join(wegameTmpDir.path, 'pages', 'index', 'main.dart.js'));
     var content = mainDartJSFile.readAsStringSync();
     if (content.contains("factory.isLive\$1(_this)")) {
       content = content.replaceAll("factory.isLive\$1(_this)", "true");
